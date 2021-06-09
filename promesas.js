@@ -26,7 +26,10 @@ export const buscarDisco = (idDisco) => {
     return new Promise((resolve, reject) => {
          
         if (disco) {
+            setTimeout(() => {
             resolve(disco);
+            resolve('Informacion enviada');
+            }, 3000);
         } else {
             reject(
                 `El disco con id ${idDisco} no existe`
